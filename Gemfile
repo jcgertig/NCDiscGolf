@@ -15,6 +15,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 # gem 'websocket-rails'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do
   gem 'awesome_print'

@@ -1,0 +1,107 @@
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin border-radius($args...) {
+  -webkit-border-radius:   $args;
+  -moz-border-radius:      $args;
+  border-radius:           $args;
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+}
+
+@mixin border-radius-right($args...) {
+  -webkit-border-top-right-radius:      $args;
+  -moz-border-top-right-radius:         $args;
+  border-top-right-radius:              $args;
+  -webkit-border-bottom-right-radius:   $args;
+  -moz-border-bottom-right-radius:      $args;
+  border-bottom-right-radius:           $args;
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin box-emboss($size, $opacity, $color, $size2, $opacity2, $color2, $opacity3, $color3) {
+  -webkit-box-shadow: 0 $size 0 rgba($color, $opacity), inset 0 $size2 0 rgba($color2, $opacity2);
+  -moz-box-shadow: 0 $size 0 rgba($color, $opacity), inset 0 $size2 0 rgba($color2, $opacity2);
+  box-shadow: 0 $size 0 rgba($color, $opacity), inset 0 $size2 0 rgba($color2, $opacity2);
+  background-color: rgba($color3, $opacity3);
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: -1px 0px 18px 0px rgba(50, 50, 50, 0.85);
+  -moz-box-shadow:    -1px 0px 18px 0px rgba(50, 50, 50, 0.85);
+  box-shadow:         -1px 0px 18px 0px rgba(50, 50, 50, 0.85);
+}
+
+@mixin letterpress($color, $opacity, $color2) {
+  text-shadow: 0px 1px 1px rgba($color, $opacity);
+  color: $color2;
+}
+
+@mixin emboss-text($fontsize, $color1, $opacity1, $color2, $opacity2) {
+  text-shadow: -1px -1px 1px rgba($color1, $opacity1), 1px 1px 1px rgba($color2, $opacity2);
+  color: #9c8468;
+  opacity: 0.3;
+  font: $fontsize 'Museo700';
+}
+
+@mixin full-background($url) {
+  background: $url no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin strech-background($url) {
+  background: $url no-repeat top left;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+@mixin rotate($deg) {
+  /* Safari */
+  -webkit-transform: rotate($deg);
+  /* Firefox */
+  -moz-transform: rotate($deg);
+  /* IE */
+  -ms-transform: rotate($deg);
+  /* Opera */
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+  /* Internet Explorer */
+  // filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}

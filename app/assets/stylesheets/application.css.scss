@@ -10,6 +10,15 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require font-awesome
+ *= require fancybox
+ *= require jquery.ui.all
  *= require_self
  */
+
+  @import "bootstrap";
+  @import "vender/jeet/index";
+  @import "vender/pnotify.custom.min";
+  @import "vender/magic";
+  @import "vender/hint";
+  @import "vender/mixins";
