@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery-ui
 //= require pnotify.custom.min
 //= require bootstrap
 //= require fancybox
+//= require pages
