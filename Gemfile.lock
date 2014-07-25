@@ -56,6 +56,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
+    bootstrap_form (2.1.1)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -124,7 +125,6 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hashie (3.2.0)
     hike (1.2.3)
     i18n (0.6.11)
     inflecto (0.0.2)
@@ -159,9 +159,6 @@ GEM
     net-ssh (2.9.1)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
-    omniauth (1.2.2)
-      hashie (>= 1.2, < 4)
-      rack (~> 1.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.0.0)
@@ -272,6 +269,7 @@ DEPENDENCIES
   awesome_print
   better_errors
   bootstrap-sass
+  bootstrap_form
   cancan
   carrierwave
   certified
@@ -285,7 +283,6 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mini_magick
-  omniauth
   pg
   pry-rails
   pry-stack_explorer
